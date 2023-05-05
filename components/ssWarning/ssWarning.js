@@ -22,7 +22,7 @@ export default function ffWarning({ close }) {
             <br /><br />
             Any interactions that I have with the associated Elonswap protocol apps, smart contracts or any related functions MAY place my funds at risk, and I hereby release the Elonswap protocol and its contributors, team members, and service providers from any and all liability associated with my use of the above-mentioned functions.
             <br /><br />
-            I am lawfully permitted to access this site and use the solidly.exchange application functions, and I am not in contravention of any laws governing my jurisdiction of residence or citizenship.
+            I am lawfully permitted to access this site and use the Elonswap application functions, and I am not in contravention of any laws governing my jurisdiction of residence or citizenship.
           </Typography>
           <div className={classes.buttonsContainer}>
             <Button fullWidth variant="contained" size="large" className={classes.primaryButton} onClick={close}>

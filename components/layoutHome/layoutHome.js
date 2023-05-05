@@ -38,7 +38,7 @@ export default function Layout({
           crossOrigin=""
         />
         <meta name="description" content="Elonswap allows low cost, near 0 slippage trades on uncorrelated or tightly correlated assets built on Bsc." />
-        <meta name="og:title" content="Solidly" />
+        <meta name="og:title" content="Elonswap" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={classes.content}>
