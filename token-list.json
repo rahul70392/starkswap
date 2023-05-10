@@ -1,25 +1,9 @@
 [
 	{
-		"chainId": 97,
-		"name": "USD Coin",
-		"symbol": "USDC",
-		"address": "0x64544969ed7EBf5f083679233325356EbE738930",
-		"decimals": 18,
-		"logoURI": "https://assets.spookyswap.finance/tokens/USDC.png"
-	},
-	{
-		"chainId": 97,
-		"name": "Test Coin",
-		"symbol": "TEST",
-		"address": "0x1a14B6986D777F14537aadF8adF28B75aC87b28b",
-		"decimals": 18,
-		"logoURI": "https://assets.spookyswap.finance/tokens/USDC.png"
-	},
-	{
-		"chainId": 97,
+		"chainId": 719,
 		"name": "Solid",
 		"symbol": "SOLID",
-		"address": "0x05f0E0A834Ed6b9a759b96D479E5dED190F02aea",
+		"address": "0xF9542f6A674263df67fd31fd39914Ca81b36B17E",
 		"decimals": 18,
 		"logoURI": "https://assets.spookyswap.finance/tokens/USDC.png"
 	}

@@ -5,14 +5,14 @@ import { NetworkConnector } from "@web3-react/network-connector";
 
 const POLLING_INTERVAL = 12000;
 const RPC_URLS = {
-  97: "https://data-seed-prebsc-1-s1.binance.org:8545/",
-  // 250: "https://rpc.ftm.tools",
+  // 97: "https://data-seed-prebsc-1-s1.binance.org:8545/",
+  719: "https://puppynet.shibrpc.com",
   4002: "https://rpc.testnet.fantom.network"
 };
 
 let obj = {}
-if(process.env.NEXT_PUBLIC_CHAINID == 97) {
-  obj = { 97: RPC_URLS[97] }
+if(process.env.NEXT_PUBLIC_CHAINID == 719) {
+  obj = { 719: RPC_URLS[719] }
 } else {
   obj = { 4002: RPC_URLS[4002] }
 }
@@ -25,7 +25,7 @@ export const injected = new InjectedConnector({
 
 export const walletconnect = new WalletConnectConnector({
   rpc: {
-    97: RPC_URLS[97],
+    719: RPC_URLS[719],
     4002: RPC_URLS[4002]
   },
   chainId: parseInt(process.env.NEXT_PUBLIC_CHAINID),
