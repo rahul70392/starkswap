@@ -633,7 +633,7 @@ function AssetSelect({ type, value, assetOptions, onSelect }) {
               autoFocus
               variant="outlined"
               fullWidth
-              placeholder="BSC, MIM ......."
+              placeholder="BONE, MIM ......."
               value={ search }
               onChange={ onSearchChanged }
               InputProps={{
@@ -673,7 +673,7 @@ function AssetSelect({ type, value, assetOptions, onSelect }) {
               autoFocus
               variant="outlined"
               fullWidth
-              placeholder="BSC, MIM ......."
+              placeholder="BONE, MIM ......."
               value={ search }
               onChange={ onSearchChanged }
               InputProps={{

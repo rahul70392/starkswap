@@ -31,7 +31,7 @@ export default function ssBribeCreate() {
   const ssUpdated = async () => {
     const storeAssetOptions = stores.stableSwapStore.getStore('baseAssets')
     let filteredStoreAssetOptions = storeAssetOptions.filter((option) => {
-      return option.address !== 'BSC'
+      return option.address !== 'BONE'
     })
     const storePairs = stores.stableSwapStore.getStore('pairs')
     setAssetOptions(filteredStoreAssetOptions)
@@ -61,7 +61,7 @@ export default function ssBribeCreate() {
     const assetsUpdated = () => {
       const baseAsset = stores.stableSwapStore.getStore('baseAssets')
       let filteredStoreAssetOptions = baseAsset.filter((option) => {
-        return option.address !== 'BSC'
+        return option.address !== 'BONE'
       })
       setAssetOptions(filteredStoreAssetOptions)
     }
@@ -401,7 +401,7 @@ function AssetSelect({ type, value, assetOptions, onSelect }) {
               autoFocus
               variant="outlined"
               fullWidth
-              placeholder="BSC, MIM ......."
+              placeholder="BONE, MIM ......."
               value={ search }
               onChange={ onSearchChanged }
               InputProps={{
@@ -441,7 +441,7 @@ function AssetSelect({ type, value, assetOptions, onSelect }) {
               autoFocus
               variant="outlined"
               fullWidth
-              placeholder="BSC, MIM ......."
+              placeholder="BONE, MIM ......."
               value={ search }
               onChange={ onSearchChanged }
               InputProps={{
