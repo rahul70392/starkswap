@@ -11,7 +11,7 @@ import { veDistABI } from './veDistABI'
 import { minterABI } from './minterABI'
 import { wftmABI } from './wftmABI'
 import { solidlyLibraryABI } from './solidlyLibraryABI'
-
+//const routerABI = require('./routerABI.json')
 export default {
   erc20ABI,
   veTokenABI,

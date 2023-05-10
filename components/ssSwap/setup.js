@@ -25,7 +25,8 @@ import classes from './ssSwap.module.css'
 import stores from '../../stores'
 import {
   ACTIONS,
-  ETHERSCAN_URL
+  ETHERSCAN_URL,
+  CONTRACTS
 } from '../../stores/constants'
 import BigNumber from 'bignumber.js'
 
@@ -56,6 +57,22 @@ function Setup() {
   const [ quoteError, setQuoteError ] = useState(null)
   const [ quote, setQuote ] = useState(null)
 
+  //function to check that user's input is not greater than 1% of total supply
+  const [totalSupplyFrom, setTotalSupplyFrom] = useState(null)
+  const [disableForMaxInput, setdisableForMaxInput] = useState(false)   //to disable the swap button
+  async function checkMaxInput () {
+    const web3 = await stores.accountStore.getWeb3Provider()
+    console.log(fromAssetValue.address)
+    const routerContract = await new web3.eth.Contract(CONTRACTS.ERC20_ABI, fromAssetValue.address)
+    const b = await routerContract.methods.totalSupply().call((error, result) => {
+      if(error){
+        console.log(error)
+      }
+      let supply = web3.utils.fromWei(result, 'ether')
+      setTotalSupplyFrom(supply)
+    })
+  }
+  const [account, setAccount] = useState(stores.accountStore.getStore('account'));  //////
   useEffect(function() {
     const errorReturned = () => {
       setLoading(false)
@@ -165,8 +182,19 @@ function Setup() {
   }
 
   const fromAmountChanged = (event) => {
-    setFromAmountError(false)
-    setFromAmountValue(event.target.value)
+    checkMaxInput()
+    const onePercent = totalSupplyFrom/100
+    let error = false
+    if(event.target.value > onePercent){
+      setFromAmountValue(event.target.value)
+      setFromAmountError("Anti Whale Dump: You can not sell more than 1% of total supply")
+      error = true
+      setdisableForMaxInput(true)   //disable swap button
+    } else if (!error){
+      setFromAmountError(false)
+      setdisableForMaxInput(false)
+      setFromAmountValue(event.target.value)
+    }
     if(event.target.value == '') {
       setToAmountValue('')
       setQuote(null)
