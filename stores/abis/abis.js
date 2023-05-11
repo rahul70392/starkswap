@@ -2,7 +2,7 @@ import { erc20ABI } from './erc20ABI'
 import { veTokenABI } from './veTokenABI'
 import { factoryABI } from './factoryABI'
 import { pairABI } from './pairABI'
-import { routerABI } from './routerABI'
+//import { routerABI } from './routerABI'
 import { voterABI } from './voterABI'
 import { gaugeABI } from './gaugeABI'
 import { bribeABI } from './bribeABI'
@@ -11,7 +11,7 @@ import { veDistABI } from './veDistABI'
 import { minterABI } from './minterABI'
 import { wftmABI } from './wftmABI'
 import { solidlyLibraryABI } from './solidlyLibraryABI'
-//const routerABI = require('./routerABI.json')
+const routerABI = require('./routerABI.json')
 export default {
   erc20ABI,
   veTokenABI,

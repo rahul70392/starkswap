@@ -185,7 +185,7 @@ function Setup() {
     checkMaxInput()
     const onePercent = totalSupplyFrom/100
     let error = false
-    if(event.target.value > onePercent){
+    if(event.target.value > onePercent && onePercent !=0){
       setFromAmountValue(event.target.value)
       setFromAmountError("Anti Whale Dump: You can not sell more than 1% of total supply")
       error = true
